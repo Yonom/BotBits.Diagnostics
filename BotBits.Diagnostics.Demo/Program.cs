@@ -7,7 +7,8 @@ namespace BotBits.Diagnostics.Demo
         static void Main(string[] args)
         {
             var bot = new BotBitsClient();
-            EventAnalyser.Of(bot).AnalyseAssembly(Assembly.GetAssembly(typeof(BotBitsClient)));
+            DiagnosticsExtension.LoadInto(bot);
+            EventAnalyzer.Of(bot).AnalyzeAssembly(Assembly.GetAssembly(typeof(BotBitsClient)));
         }
     }
 

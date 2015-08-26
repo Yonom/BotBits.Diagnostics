@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace BotBits.Diagnostics
 {
-    public sealed class EventAnalyser : Package<EventAnalyser>
+    public sealed class EventAnalyzer : Package<EventAnalyzer>
     {
         private static readonly MethodInfo _bindMethod =
-            typeof(EventAnalyser).GetMethod("ScanEvent", BindingFlags.NonPublic | BindingFlags.Instance);
+            typeof(EventAnalyzer).GetMethod("ScanEvent", BindingFlags.NonPublic | BindingFlags.Instance);
 
 
-        public void AnalyseAssembly(Assembly assembly)
+        public void AnalyzeAssembly(Assembly assembly)
         {
             var events = AppDomain.CurrentDomain.GetAssemblies()
                 .SelectMany(a => a
