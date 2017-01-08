@@ -12,8 +12,7 @@ namespace BotBits.Diagnostics
     {
         private static readonly MethodInfo _bindMethod =
             typeof(EventAnalyzer).GetMethod("ScanEvent", BindingFlags.NonPublic | BindingFlags.Instance);
-
-
+        
         public void AnalyzeAssembly(Assembly assembly)
         {
             var events = AppDomain.CurrentDomain.GetAssemblies()
